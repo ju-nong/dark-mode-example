@@ -1,8 +1,14 @@
 import styled from "@emotion/styled";
+import { Mode } from "../types";
 
 const DocumentStyled = styled.div`
     max-width: 500px;
     word-break: break-all;
+
+    &.dark {
+        pointer-events: none;
+        user-select: none;
+    }
 
     > h1 {
         margin-bottom: 2rem;
@@ -33,9 +39,13 @@ const DocumentStyled = styled.div`
     }
 `;
 
-function Document() {
+interface DocumentProps {
+    mode: Mode;
+}
+
+function Document({ mode }: DocumentProps) {
     return (
-        <DocumentStyled>
+        <DocumentStyled className={mode}>
             <h1>오아리를 소개합니다!</h1>
             <img src="/images/ari-profile.png" alt="아리 프로필" />
             <p>

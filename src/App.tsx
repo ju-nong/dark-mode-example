@@ -6,12 +6,18 @@ function App() {
     const [mode, setMode] = useState<Mode>("dark");
 
     function handleToggleMode() {
-        setMode(mode === "dark" ? "white" : "dark");
+        const isDark = mode === "dark";
+
+        const $root = document.getElementById("root");
+
+        $root?.style.setProperty("--cursor", isDark ? "auto" : "none");
+
+        setMode(isDark ? "white" : "dark");
     }
 
     return (
         <>
-            <Document />
+            <Document mode={mode} />
             {mode === "dark" ? <Flashlight /> : null}
             <ToggleButton mode={mode} onToggleMode={handleToggleMode} />
         </>

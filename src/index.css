@@ -1,6 +1,7 @@
 :root {
     --x: -100px;
     --y: -100px;
+    --cursor: none;
 }
 
 * {
@@ -15,6 +16,7 @@ body,
 #root {
     width: 100%;
     height: 100%;
+    cursor: var(--cursor);
 }
 
 #root {
