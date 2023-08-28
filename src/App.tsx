@@ -1,9 +1,10 @@
-import { Document } from "./components";
+import { Document, Flashlight } from "./components";
 
 function App() {
     return (
         <>
             <Document />
+            <Flashlight />
         </>
     );
 }
