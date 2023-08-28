@@ -16,6 +16,11 @@ const DocumentStyled = styled.div`
     > p {
         font-size: 18px;
         padding-bottom: 0.5rem;
+
+        &.gray {
+            font-size: 16px;
+            color: gray;
+        }
     }
 
     > div {
@@ -46,6 +51,9 @@ function Document() {
                 주인을 닮아 식욕이 남다릅니다. 간식을 매우 좋아하며, 주는대로 잘
                 받아 먹습니다. 12년 동안 아리가 배불러하는 것을 본 적이
                 없습니다.
+            </p>
+            <p className="gray">
+                잘 찾아 보시면 다크모드 비활성화 버튼이 있어요
             </p>
             <div>
                 <img src="/images/ari-full-1.jpg" alt="아리 사진1" />
