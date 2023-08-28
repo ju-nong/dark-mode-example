@@ -1,5 +1,11 @@
+import { Document } from "./components";
+
 function App() {
-    return <>Hello World</>;
+    return (
+        <>
+            <Document />
+        </>
+    );
 }
 
 export default App;
